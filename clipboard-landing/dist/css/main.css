@@ -14,20 +14,34 @@
     font-size: 1.6rem;
     margin-bottom: 4rem; }
 
+.text-center {
+  text-align: center; }
+
 .btn-primary, .btn-secondary {
   display: inline-block;
   cursor: pointer;
   padding: 1.5rem 3rem;
   font-weight: 600;
-  border-radius: 10rem; }
+  border-radius: 10rem;
+  border-bottom: 3px solid transparent; }
 
 .btn-primary {
   background-color: #26baa4;
-  color: white; }
+  color: white;
+  border-color: #1d907f; }
 
 .btn-secondary {
   background-color: #6173ff;
-  color: white; }
+  color: white;
+  border-color: #2e46ff; }
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .cta a {
+    margin: .5rem 0; }
 
 * {
   padding: 0;
@@ -42,6 +56,9 @@ body {
   background-color: white;
   color: #4c545d;
   font-family: "Bai Jamjuree", sans-serif; }
+
+ul {
+  list-style: none; }
 
 a {
   text-decoration: none; }
@@ -96,3 +113,29 @@ img {
 
 .tools-item:not(:last-child) {
   margin-bottom: 5rem; }
+
+.companies {
+  padding-top: 8rem; }
+  .companies-item:not(:last-child) {
+    margin-bottom: 4rem; }
+  .companies img {
+    width: 13rem; }
+
+.footer {
+  padding: 10rem;
+  background-color: #f4f4f4; }
+  .footer-logo {
+    width: 7rem;
+    margin-bottom: 3rem; }
+  .footer a {
+    display: block;
+    color: inherit;
+    margin-bottom: 2rem; }
+
+.sm {
+  display: flex;
+  justify-content: space-between; }
+  .sm-link {
+    margin: 0 !important;
+    padding: .5rem;
+    font-size: 3rem; }

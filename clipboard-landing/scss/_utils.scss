@@ -20,12 +20,17 @@
     }
 }
 
+.text-center {
+    text-align: center;
+}
+
 %btn {
     display: inline-block;
     cursor: pointer;
     padding: 1.5rem 3rem;
     font-weight: 600;
     border-radius: 10rem;
+    border-bottom: 3px solid transparent;
 }
 
 .btn {
@@ -33,11 +38,24 @@
         @extend %btn;
         background-color: $strong-cyan;
         color: white;
+        border-color: darken($strong-cyan, 10%);
     }
 
     &-secondary {
         @extend %btn;
         background-color: $light-blue;
         color: white;
+        border-color: darken($light-blue, 10%);
+    }
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        margin: .5rem 0;
     }
 }
