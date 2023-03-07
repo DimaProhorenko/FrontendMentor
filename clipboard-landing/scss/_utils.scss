@@ -1,0 +1,43 @@
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section {
+    padding: 2rem 0;
+    text-align: center;
+
+    &-title {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    &-lead {
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+    }
+}
+
+%btn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 1.5rem 3rem;
+    font-weight: 600;
+    border-radius: 10rem;
+}
+
+.btn {
+    &-primary {
+        @extend %btn;
+        background-color: $strong-cyan;
+        color: white;
+    }
+
+    &-secondary {
+        @extend %btn;
+        background-color: $light-blue;
+        color: white;
+    }
+}
