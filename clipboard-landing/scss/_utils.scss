@@ -1,3 +1,6 @@
+@import 'mixins';
+
+
 .container {
     width: 90%;
     max-width: 1440px;
@@ -9,14 +12,35 @@
     padding: 2rem 0;
     text-align: center;
 
+    @include for-desktop {
+        padding: 5rem 0;
+    }
+
     &-title {
         font-size: 2.8rem;
         margin-bottom: 2rem;
+
+        @include for-tablet-portrait {
+            font-size: 3.2rem;
+        }
+
+        @include for-desktop {
+            font-size: 4rem;
+        }
     }
     
     &-lead {
         font-size: 1.6rem;
         margin-bottom: 4rem;
+        
+        @include for-tablet-portrait {
+            font-size: 2rem;
+        }
+
+        @include for-desktop {
+            font-size: 2.4rem;
+            margin-bottom: 6rem;
+        }
     }
 }
 
@@ -31,6 +55,15 @@
     font-weight: 600;
     border-radius: 10rem;
     border-bottom: 3px solid transparent;
+    transition: transform linear .2s;
+
+    &:hover {
+        transform: translateY(-.2rem);
+    }
+
+    @include for-desktop {
+        font-size: 2.5rem;
+    }
 }
 
 .btn {
@@ -39,6 +72,10 @@
         background-color: $strong-cyan;
         color: white;
         border-color: darken($strong-cyan, 10%);
+
+        &:hover {
+            border-color: darken($strong-cyan, 20%);
+        }
     }
 
     &-secondary {
@@ -57,5 +94,16 @@
 
     a {
         margin: .5rem 0;
+    }
+}
+
+.main-flex {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+    @include for-phone {
+        flex-direction: column;
+        justify-content: flex-start;
     }
 }
