@@ -24,7 +24,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="wrapper">
+      <div class="wrapper header__container">
         <nav class="header__nav">
           <a href="/" class="header__home"
             ><span class="visually-hidden">To home page</span> adamkeyes</a
@@ -54,5 +54,39 @@
         </nav>
       </div>
     </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrapper">
+          <div class="hero__container">
+            <picture class="hero__picture">
+              <source
+                media="(min-width: 62.5rem)"
+                srcset="./assets/images/image-profile-desktop.webp"
+              />
+              <source
+                media="(min-width: 37.5rem)"
+                srcset="./assets/images/image-profile-tablet.webp"
+              />
+              <img
+                src="./assets/images/image-profile-mobile.webp"
+                alt="Picture of Adam Keyes"
+              />
+            </picture>
+            <div class="hero__text">
+              <h1 class="hero__title">
+                Nice to meet you! I'm
+                <span class="underline underline--accent">Adam Keyes.</span>
+              </h1>
+              <p class="hero__lead">
+                Based in the UK, I'm a front-end developer passionate about
+                building accessible web apps that users love.
+              </p>
+              <a href="#" class="hero__contact">Contact me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

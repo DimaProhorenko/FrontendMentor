@@ -17,3 +17,11 @@
     height:   1px;
     overflow: hidden;
 }
+
+.underline {
+    border-bottom: 2px solid;
+
+    &--accent {
+        border-color: $clr-accent;
+    }
+}

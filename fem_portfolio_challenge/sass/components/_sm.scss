@@ -15,8 +15,8 @@
         }
     }
 
-    &__link {
-        font-size: 1.125rem;
-        font-size: unquote("clamp(1.125rem, 0.76rem + 1.52vw, 1.5rem)");
+    &__link {  
+        font-size: 1.3rem;
+        font-size: unquote("clamp(1.5rem, 0.66rem + 2.55vw, 1.8rem)");
     }
 }
