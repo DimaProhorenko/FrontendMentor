@@ -1,0 +1,22 @@
+.sm {
+    &__li {
+        display: inline-block;
+
+        &:first-child {
+            margin-right: 25px;
+        }
+        &:last-child {
+            margin-left: 25px;
+        }
+
+        &:not(:first-child),
+        &:not(:last-child) {
+            margin-inline: 12.5px;
+        }
+    }
+
+    &__link {
+        font-size: 1.125rem;
+        font-size: unquote("clamp(1.125rem, 0.76rem + 1.52vw, 1.5rem)");
+    }
+}

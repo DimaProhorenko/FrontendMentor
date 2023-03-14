@@ -1,0 +1,19 @@
+.wrapper {
+    width: calc(100% - 2rem);
+    max-width: $wrapper-width;
+    margin-inline: auto;
+    overflow: hidden;
+
+    @include for-tablet-up {
+        width: calc(100% - 3.75rem);
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    left:     -10000px;
+    top:      auto;
+    width:    1px;
+    height:   1px;
+    overflow: hidden;
+}

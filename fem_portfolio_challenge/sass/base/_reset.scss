@@ -1,0 +1,32 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-stack;
+    background-color: $clr-body-bg;
+    color: $clr-text1;
+    font-size: $fs-18;
+    line-height: 1.56;
+}
+
+ul {
+    list-style: none;
+}
+
+
+a {
+    color: inherit;
+    transition: color $transition;
+
+    &:hover {
+        color: $clr-accent;
+    }
+}
