@@ -1,15 +1,80 @@
 .hero {
     text-align: center;
+    overflow: hidden;
+    position: relative;
+    max-width: $wrapper-width;
+    margin: 0 auto;
+    @include for-desktop-up {
+        overflow: visible;
+    }
+
+    &__circle {
+        position: absolute;
+        top: toRem(330);
+        right: 0;
+        translate: 50% -50%;
+        z-index: 3;
+
+        @include for-tablet-up {
+            top: unset;
+            bottom: 0;
+            right: toRem(50);
+        }
+
+        @include for-desktop-up {
+            top: toRem(600);
+            right: toRem(500);
+        }
+    }
+
+    &__rings {
+        position: absolute;
+        top: toRem(110);
+        left: 0;
+        translate: -50%;
+        z-index: 3;
+    }
 
     &__picture {
         display: inline-block;
         width: toRem(174);
         margin-bottom: 1em;
+        position: relative;
+
+        @include for-tablet-up {
+            position: absolute;
+            width: 100%;
+            max-width: toRem(350);
+            top: 0;
+            // left: 53%;
+            right: 0;
+        }
+
+        @include for-desktop-up {
+            left: auto;
+            right: 0;
+            max-width: toRem(500);
+        }
+    }
+
+    &__text {
+        position: relative;
+        z-index: 4;
+        @include for-tablet-up {
+            text-align: left;
+            width: 70%;
+            padding-top: toRem(110);
+        }
+
+        @include for-desktop-up {
+            width: 70%;
+            padding-top: 30vh;
+        }
     }
 
     &__title {
         font-size: 2rem;
-        font-size: unquote('clamp(2rem, -0.1rem + 8.95vw, 5.5rem)');
+        font-size: unquote('clamp(2rem, -0.1rem + 8.95vw, 5rem)');
         margin-bottom: toRem(20);
 
         @include for-tablet-up {
@@ -19,9 +84,10 @@
 
     &__lead {
         font-size: 1rem;
-        font-size: unquote('clamp(1rem, 0.79rem + 0.88vw, 1.125rem)');
+        font-size: unquote('clamp(1rem, 0.79rem + 0.88vw, 1.225rem)');
         color: $clr-text2;
         margin-bottom: toRem(10);
+        max-width: toRem(450);
     }
 
     &__contact {
@@ -30,5 +96,19 @@
         font-size: unquote('clamp(1rem, -0.041rem + 4.44vw, 1.625rem)');
         letter-spacing: 2.29px;
         font-weight: 700;
+        display: inline-block;
+        padding: .5em;
+        padding-bottom: 1em;
+    }
+
+    &__break {
+        display: none;
+
+        @include for-tablet-up {
+            display: inline-block;
+        }
+        @include for-desktop-up {
+            display: none;
+        }
     }
 }

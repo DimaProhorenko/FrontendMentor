@@ -1,3 +1,7 @@
 @mixin for-tablet-up() {
     @media screen and (min-width: $bp-tablet) { @content; }
 }
+
+@mixin for-desktop-up() {
+    @media screen and (min-width: $bp-pc) { @content; }
+}

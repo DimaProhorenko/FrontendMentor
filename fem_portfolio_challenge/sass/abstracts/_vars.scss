@@ -14,6 +14,8 @@ $fs-32: toRem(32);
 $fs-24: toRem(24);
 
 $wrapper-width: toRem(1110);
+$wrapper-ready-width-mobile: calc(100% - 2rem);
+$wrapper-ready-width-tablet: calc(100% - 3.75rem);
 
 $transition: 250ms ease-in-out;
 
