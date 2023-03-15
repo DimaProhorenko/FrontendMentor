@@ -2,10 +2,26 @@
     text-align: center;
     overflow: hidden;
     position: relative;
-    max-width: $wrapper-width;
+    // max-width: $wrapper-width;
     margin: 0 auto;
+    border-bottom: 4px solid $clr-text1;
+    padding-bottom: 2em;
+    overflow: hidden;
     @include for-desktop-up {
         overflow: visible;
+    }
+
+    &__container {
+        // border: 2px solid blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include for-tablet-up {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
     }
 
     &__circle {
@@ -18,12 +34,12 @@
         @include for-tablet-up {
             top: unset;
             bottom: 0;
-            right: toRem(50);
+            right: -12vw;
         }
 
         @include for-desktop-up {
             top: toRem(600);
-            right: toRem(500);
+            right: 45vw;
         }
     }
 
@@ -32,34 +48,45 @@
         top: toRem(110);
         left: 0;
         translate: -50%;
-        z-index: 3;
+        z-index: -1;
     }
 
     &__picture {
         display: inline-block;
         width: toRem(174);
         margin-bottom: 1em;
-        position: relative;
+        // position: relative;
+        // z-index: 4;
 
         @include for-tablet-up {
-            position: absolute;
             width: 100%;
-            max-width: toRem(350);
-            top: 0;
-            // left: 53%;
-            right: 0;
+            order: 2;
+            width: 42vw;
+            flex-shrink: 0;
+            margin-left: -12vw;
         }
 
-        @include for-desktop-up {
-            left: auto;
-            right: 0;
-            max-width: toRem(500);
-        }
+        // @include for-tablet-up {
+        //     // position: absolute;
+        //     width: 100%;
+        //     max-width: toRem(350);
+        //     top: 0;
+        //     // left: 53%;
+        //     right: 0;
+        //     order: 2;
+        // }
+
+        // @include for-desktop-up {
+        //     left: auto;
+        //     right: 0;
+        //     max-width: toRem(500);
+        // }
     }
 
     &__text {
         position: relative;
-        z-index: 4;
+        z-index: 5;
+        flex-shrink: 0;
         @include for-tablet-up {
             text-align: left;
             width: 70%;

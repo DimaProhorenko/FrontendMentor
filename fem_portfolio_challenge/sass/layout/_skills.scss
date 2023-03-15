@@ -1,0 +1,32 @@
+.skills {
+    text-align: center;
+
+    @include for-tablet-up {
+        text-align: left;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 2em;
+
+        @include for-tablet-up {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 4em;
+        }
+    }
+
+    &__item {
+        min-width: toRem(300);
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-size: clamp(2rem, 1.4rem + 2.56vw, 3rem);
+    }
+}
