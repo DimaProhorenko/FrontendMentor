@@ -7,8 +7,10 @@
     border-bottom: 4px solid $clr-text1;
     padding-bottom: 2em;
     overflow: hidden;
+
     @include for-desktop-up {
         overflow: visible;
+        padding-bottom: 4em;
     }
 
     &__container {

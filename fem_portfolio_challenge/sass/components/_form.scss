@@ -1,0 +1,56 @@
+.form {
+    padding: 1em;
+
+    &__group {
+        margin-bottom: 1em;
+        position: relative;
+    }
+
+    &__input {
+        border: none;
+        border-bottom: 1px solid $clr-text1;
+        outline: none;
+        background-color: transparent;
+        color: $clr-text1;
+        display: inline-block;
+        width: 100%;
+        padding: .8em 1.2em;
+        font-size: 1rem;
+        transition: border-color $transition;
+
+        &::placeholder {
+            text-transform: uppercase;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $clr-accent;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        translate: 0 -50%;
+    }
+
+    &__button {
+        display: block;
+        margin-left: auto;
+        background-color: transparent;
+        color: inherit;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+
+        &:hover,
+        &:focus {
+            color: $clr-accent;
+        }
+
+        &:focus {
+            outline: 1px solid $clr-accent;
+        }
+    }
+}

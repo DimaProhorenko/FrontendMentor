@@ -3,6 +3,7 @@
     max-width: $wrapper-width;
     margin-inline: auto;
     overflow: hidden;
+    padding: .2em 0;
 
     @include for-tablet-up {
         width: calc(100% - 3.75rem);
@@ -11,6 +12,38 @@
 
 .section {
     padding: 2em 0; 
+    text-align: center;
+
+    @include for-tablet-up {
+        text-align: left;
+    }
+
+    @include for-desktop-up {
+        padding: 4em 0;
+    }
+
+    &__info {
+        margin-bottom: 2em;
+
+        @include for-tablet-up {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
+    }
+
+    &__lead {
+        font-size: 1rem;
+        font-size: clamp(1rem, 0.925rem + 0.32vw, 1.125rem);
+        margin-bottom: .6em;
+    }
+
+    
 }
 
 
@@ -36,6 +69,11 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        transition: background-color $transition;
+    }
+
+    &:hover::after {
+        background-color: $clr-accent;
     }
 
     &--accent {
@@ -43,4 +81,21 @@
             background-color: $clr-accent;
         }
     }
+
+    &--lower {
+        &::after {
+            bottom: -4px;
+        }
+    }
+}
+
+.contact-link {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-size: clamp(1rem, -0.041rem + 4.44vw, 1.1rem);
+    letter-spacing: 2.29px;
+    font-weight: 700;
+    display: inline-block;
+    padding: .5em;
+    padding-bottom: 1em;
 }

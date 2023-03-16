@@ -1,0 +1,27 @@
+.contact {
+    background-color: $clr-contact-bg;
+
+    @include for-tablet-up {
+        text-align: center;
+    }
+
+    @include for-desktop-up {
+        text-align: left;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        @include for-desktop-up {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        width: 100%;
+    }
+}

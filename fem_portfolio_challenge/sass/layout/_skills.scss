@@ -16,13 +16,17 @@
             flex-direction: row;
             align-items: flex-start;
             justify-content: space-between;
-            gap: 4em;
+            gap: 2em;
         }
     }
 
     &__item {
-        min-width: toRem(300);
+        min-width: toRem(240);
         flex: 1;
+
+        @include for-desktop-up {
+            min-width: toRem(300);
+        }
     }
 
     &__title {

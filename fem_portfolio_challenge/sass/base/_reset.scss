@@ -35,3 +35,9 @@ img {
     max-width: 100%;
     display: inline-block;
 }
+
+picture img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
