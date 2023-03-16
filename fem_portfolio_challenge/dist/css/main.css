@@ -39,6 +39,11 @@
   font-size: 2.5rem;
   font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
 }
+@media screen and (min-width: 62.5rem) {
+  .section__title {
+    line-height: 1;
+  }
+}
 .section__lead {
   font-size: 1rem;
   font-size: clamp(1rem, 0.925rem + 0.32vw, 1.125rem);
@@ -154,11 +159,16 @@ picture img {
 .form {
   padding: 1em;
 }
+.form:invalid .form__button {
+  opacity: 0.3;
+  pointer-events: none;
+}
 .form__group {
   margin-bottom: 1em;
   position: relative;
 }
 .form__input {
+  cursor: pointer;
   border: none;
   border-bottom: 1px solid #fff;
   outline: none;
@@ -176,11 +186,22 @@ picture img {
 .form__input:hover, .form__input:focus {
   border-color: #4ee1a0;
 }
+.form__input:not(:focus):not(:placeholder-shown):invalid {
+  border-color: #ff6f5b;
+}
+.form__input:not(:focus):not(:placeholder-shown):invalid ~ .form__icon {
+  display: initial;
+}
+.form__input::placeholder {
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
 .form__icon {
   position: absolute;
   top: 50%;
   right: 1rem;
   translate: 0 -50%;
+  display: none;
 }
 .form__button {
   display: block;
@@ -508,4 +529,27 @@ picture img {
 }
 .contact__item {
   width: 100%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  padding-block: 2em;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 37.5rem) {
+  .footer__nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footer__home {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.02rem + 2.03vw, 2rem);
 }

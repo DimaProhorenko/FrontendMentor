@@ -153,7 +153,7 @@
                 />
               </picture>
               <h3 class="projects__title">Design Portfolio</h3>
-              <p class="projects__tags"><span>Html</span><span>css</span></p>
+              <h4 class="projects__tags"><span>Html</span><span>css</span></h4>
               <div class="projects__links">
                 <a href="#" class="underline underline--lower projects__link"
                   >View project</a
@@ -171,7 +171,7 @@
                 />
               </picture>
               <h3 class="projects__title">Design Portfolio</h3>
-              <p class="projects__tags"><span>Html</span><span>css</span></p>
+              <h4 class="projects__tags"><span>Html</span><span>css</span></h4>
               <div class="projects__links">
                 <a href="#" class="underline underline--lower projects__link"
                   >View project</a
@@ -189,7 +189,7 @@
                 />
               </picture>
               <h3 class="projects__title">Design Portfolio</h3>
-              <p class="projects__tags"><span>Html</span><span>css</span></p>
+              <h4 class="projects__tags"><span>Html</span><span>css</span></h4>
               <div class="projects__links">
                 <a href="#" class="underline underline--lower projects__link"
                   >View project</a
@@ -207,7 +207,7 @@
                 />
               </picture>
               <h3 class="projects__title">Design Portfolio</h3>
-              <p class="projects__tags"><span>Html</span><span>css</span></p>
+              <h4 class="projects__tags"><span>Html</span><span>css</span></h4>
               <div class="projects__links">
                 <a href="#" class="underline underline--lower projects__link"
                   >View project</a
@@ -225,7 +225,7 @@
                 />
               </picture>
               <h3 class="projects__title">Design Portfolio</h3>
-              <p class="projects__tags"><span>Html</span><span>css</span></p>
+              <h4 class="projects__tags"><span>Html</span><span>css</span></h4>
               <div class="projects__links">
                 <a href="#" class="underline underline--lower projects__link"
                   >View project</a
@@ -243,7 +243,7 @@
                 />
               </picture>
               <h3 class="projects__title">Design Portfolio</h3>
-              <p class="projects__tags"><span>Html</span><span>css</span></p>
+              <h4 class="projects__tags"><span>Html</span><span>css</span></h4>
               <div class="projects__links">
                 <a href="#" class="underline underline--lower projects__link"
                   >View project</a
@@ -309,14 +309,17 @@
                 <label for="message" class="visually-hidden"
                   >Your Message</label
                 >
-                <input
-                  type="text"
+
+                <textarea
+                  name="message"
                   id="message"
-                  class="form__input"
+                  cols="30"
+                  rows="5"
+                  class="form__input form__input--textarea"
                   placeholder="Message"
                   required
                   aria-required="true"
-                />
+                ></textarea>
                 <img
                   src="./assets/images/icon-invalid.svg"
                   alt
@@ -336,5 +339,37 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="wrapper footer__container">
+        <nav class="footer__nav">
+          <a href="/" class="footer__home"
+            ><span class="visually-hidden">To home page</span> adamkeyes</a
+          >
+          <ul class="sm">
+            <li class="sm__li">
+              <a href="#" class="sm__link" aria-label="Follow me on GitHub"
+                ><i class="fa-brands fa-github" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li class="sm__li">
+              <a href="#" class="sm__link" aria-label="Follow me on Instagram"
+                ><i aria-hidden="true" class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+            <li class="sm__li">
+              <a href="#" class="sm__link" aria-label="Follow me on Linkedin">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li class="sm__li">
+              <a href="#" class="sm__link" aria-label="Follow me on Twitter"
+                ><i aria-hidden="true" class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

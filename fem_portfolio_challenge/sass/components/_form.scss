@@ -1,12 +1,20 @@
 .form {
     padding: 1em;
 
+    &:invalid {
+        .form__button {
+            opacity: .3;
+            pointer-events: none;
+        }
+    }
+
     &__group {
         margin-bottom: 1em;
         position: relative;
     }
 
     &__input {
+        cursor: pointer;
         border: none;
         border-bottom: 1px solid $clr-text1;
         outline: none;
@@ -26,6 +34,21 @@
         &:focus {
             border-color: $clr-accent;
         }
+        
+        &:not(:focus):not(:placeholder-shown):invalid {
+            border-color: $clr-invalid;
+
+            & ~ .form__icon {
+                display: initial;
+            }
+        }
+
+        &::placeholder {
+            opacity: .5;
+            letter-spacing: 1px;
+        }
+
+        
     }
 
     &__icon {
@@ -33,6 +56,7 @@
         top: 50%;
         right: 1rem;
         translate: 0 -50%;
+        display: none;
     }
 
     &__button {
