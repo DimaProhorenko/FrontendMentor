@@ -1,0 +1,83 @@
+@use '../abstracts/' as abs;
+
+.flex {
+    display: flex;
+    gap: abs.$gap;
+}
+
+.grid {
+    display: flex;
+    gap: abs.$gap;
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: abs.$flow-space;
+}
+
+.container {
+    padding-inline: 1em;
+    max-width: 80rem;
+    margin-inline: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.bg-dark { background-color: hsl(abs.$clr-dark); }
+.bg-accent { background-color: hsl(abs.$clr-light); }
+.bg-white { background-color: hsl(abs.$clr-white); }
+
+.text-dark { background-color: hsl(abs.$clr-dark); }
+.text-accent { background-color: hsl(abs.$clr-light); }
+.text-white { background-color: hsl(abs.$clr-white); }
+
+// Typography
+.ff-serif { font-family: abs.$ff-sans; }
+.ff-sans-cond { font-family: abs.$ff-sans-cond; }
+.ff-sans-normal { font-family: abs.$ff-sans-normal; }
+
+.letter-spacing-1 { letter-spacing: 4.75px; }
+.letter-spacing-2 { letter-spacing: 2.7px; }
+.letter-spacing-3 { letter-spacing: 2.35px; }
+
+.upper { text-transform: uppercase; }
+
+.fs-900 { font-size: abs.$fs-900; }
+.fs-800 { font-size: abs.$fs-800; }
+.fs-700 { font-size: abs.$fs-700; }
+.fs-600 { font-size: abs.$fs-600; }
+.fs-500 { font-size: abs.$fs-500; }
+.fs-400 { font-size: abs.$fs-400; }
+.fs-300 { font-size: abs.$fs-300; }
+.fs-200 { font-size: abs.$fs-200; }
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+
+
+.numbered-title {
+    font-size: abs.$fs-500;
+    font-family: abs.$ff-sans-cond;
+
+    & > span {
+        display: inline-block;
+        margin-right: 1em;
+        font-size: 1em;
+        text-transform: uppercase;
+        opacity: .25;
+    }
+}

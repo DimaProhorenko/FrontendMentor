@@ -1,0 +1,24 @@
+@use './functions' as f;
+
+// Colors
+$clr-dark: 230° 35% 7%;
+$clr-light: 231° 77% 90%;
+$clr-white: 0° 0% 100%;   
+
+$gap: 1em;
+$flow-space: 1em;
+
+// Font sizes
+$fs-900: f.toRem(150);
+$fs-800: f.toRem(100);
+$fs-700: f.toRem(56);
+$fs-600: f.toRem(32);
+$fs-500: f.toRem(28);
+$fs-400: f.toRem(18);
+$fs-300: f.toRem(16);
+$fs-200: f.toRem(14);
+
+// Font families
+$ff-sans: 'Bellefair', serif;
+$ff-sans-cond: 'Barlow Condensed', sans-serif;
+$ff-sans-normal: 'Barlow', sans-serif;

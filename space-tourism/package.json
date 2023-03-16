@@ -1,0 +1,16 @@
+{
+  "name": "space-tourism",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --no-source-map --watch scss/:dist/css/"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.59.3"
+  }
+}
