@@ -1,0 +1,23 @@
+@use '../abstracts/' as abs;
+
+.primary-navigation {
+
+    &__link {
+        text-decoration: none;
+        padding: .75em;
+        border-bottom: 1px solid transparent;
+        transition: border-color 250ms linear;
+
+        &--active {
+            border-color: hsl(abs.$clr-white);
+        }
+
+    }
+
+    &__number {
+        font-size: 1em;
+        display: inline-block;
+        margin-right: .5em;
+        font-weight: 700;
+    }
+}

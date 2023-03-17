@@ -36,9 +36,9 @@
 .bg-accent { background-color: hsl(abs.$clr-light); }
 .bg-white { background-color: hsl(abs.$clr-white); }
 
-.text-dark { background-color: hsl(abs.$clr-dark); }
-.text-accent { background-color: hsl(abs.$clr-light); }
-.text-white { background-color: hsl(abs.$clr-white); }
+.text-dark { color: hsl(abs.$clr-dark); }
+.text-accent { color: hsl(abs.$clr-light); }
+.text-white { color: hsl(abs.$clr-white); }
 
 // Typography
 .ff-serif { font-family: abs.$ff-sans; }
@@ -79,5 +79,15 @@
         font-size: 1em;
         text-transform: uppercase;
         opacity: .25;
+    }
+}
+
+.underline-indicators > * {
+    padding: .5em 0;
+    border-bottom: 1px solid transparent;
+    transition: border-color 300ms linear;
+
+    &:hover {
+        border-color: hsl(abs.$clr-white);
     }
 }
