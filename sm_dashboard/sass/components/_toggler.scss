@@ -1,0 +1,32 @@
+@use '../abstracts/' as abs;
+
+.toggler {
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+        font-size: 1rem;
+        color: var(--clr-text2);
+    }
+
+    &__btn {
+        outline: none;
+        border: none;
+        display: inline-block;
+        width: 3rem;
+        aspect-ratio: 2 / 1;
+        background: var(--clr-toggle);
+        border-radius: 2em;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: abs.toRem(20);
+            height: abs.toRem(20);
+            border-radius: 50%;
+            background-color: var(--clr-body-bg);
+            @include abs.absolute(top 50% right 4px);
+            translate: 0 -50%;
+        }
+    }
+}

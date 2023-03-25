@@ -1,0 +1,27 @@
+@use '../abstracts/' as abs;
+
+.header {
+    padding-block: 2em;
+    background-color: var(--clr-top-bg);
+
+    &__container {
+        @include abs.flex-column(flex-start, stretch);
+    }
+
+    &__info {
+        padding-block-end: 2em;
+        border-block-end: 1px solid var(--clr-text2);
+    }
+
+    &__title {
+        margin-block-end: .3em;
+    }
+
+    &__followers {
+        color: var(--clr-text2);
+    }
+
+    &__toggler {
+        margin-block-start: 2em;
+    }
+}

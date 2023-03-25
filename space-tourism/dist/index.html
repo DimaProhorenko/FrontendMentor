@@ -24,10 +24,10 @@
       >
       <nav class="primary-navigation">
         <ul class="primary-navigation__list flex underline-indicators">
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item active">
             <a
               href="#"
-              class="primary-navigation__link primary-navigation__link--active upper letter-spacing-2 fs-300 text-white"
+              class="primary-navigation__link upper letter-spacing-2 fs-300 text-white"
               ><span class="primary-navigation__number">00</span>Active</a
             >
           </li>
@@ -47,10 +47,35 @@
           </li>
         </ul>
       </nav>
-      <div class="tabs">
-        <button>Moon</button>
-        <button>Mars</button>
-        <button>Europa</button>
+      <div class="tabs underline-indicators">
+        <button
+          aria-selected="true"
+          class="tabs__button active ff-sans-cond fs-300"
+        >
+          Moon
+        </button>
+        <button aria-selected="false" class="tabs__button ff-sans-cond fs-300">
+          Mars
+        </button>
+        <button aria-selected="false" class="tabs__button ff-sans-cond fs-300">
+          Europa
+        </button>
+      </div>
+
+      <div class="dot-indicators flex">
+        <button aria-selected="true" class="active dot-indicators__btn">
+          <span class="sr-only">Slide title</span></button
+        ><button aria-selected="false" class="dot-indicators__btn">
+          <span class="sr-only">Slide title</span></button
+        ><button aria-selected="false" class="dot-indicators__btn">
+          <span class="sr-only">Slide title</span>
+        </button>
+      </div>
+
+      <div class="num-indicators flow">
+        <button class="active">1</button>
+        <button class="active">2</button>
+        <button class="active">3</button>
       </div>
     </div>
   </body>

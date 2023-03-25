@@ -199,12 +199,43 @@ html:focus-within {
 }
 
 .underline-indicators > * {
-  padding: 0.5em 0;
+  cursor: pointer;
   border-bottom: 1px solid transparent;
+  padding: 0.5em 0;
   transition: border-color 300ms linear;
 }
-.underline-indicators > *:hover {
+.underline-indicators > *:focus {
+  display: none;
+  outline: none;
+  border: none;
+}
+.underline-indicators > *:hover, .underline-indicators > *:focus, .underline-indicators > *:focus-within, .underline-indicators > *.active {
   border-color: hsl(0, 0%, 100%);
+}
+
+.dot-indicators > * {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  opacity: 0.4;
+  transition: opacity 300ms linear;
+}
+.dot-indicators > *:hover, .dot-indicators > *:focus, .dot-indicators > *.active {
+  opacity: 1;
+}
+
+.num-indicators > * {
+  display: block;
+  padding: 0.5em;
+  line-height: 1;
+  border: 1px solid hsl(0, 0%, 100%);
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
 }
 
 .large-button {
@@ -248,15 +279,20 @@ html:focus-within {
 .primary-navigation__link {
   text-decoration: none;
   padding: 0.75em;
-  border-bottom: 1px solid transparent;
-  transition: border-color 250ms linear;
-}
-.primary-navigation__link--active {
-  border-color: hsl(0, 0%, 100%);
 }
 .primary-navigation__number {
   font-size: 1em;
   display: inline-block;
   margin-right: 0.5em;
   font-weight: 700;
+}
+
+.tabs__button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+  outline: none;
+  border: none;
+  border-bottom: 3px solid transparent;
 }

@@ -1,0 +1,14 @@
+@use '../abstracts/' as abs;
+
+.tabs {
+
+    &__button {
+        display: inline-block;
+        padding: .5em 1em;
+        background-color: transparent;
+        color: hsl(abs.$clr-white);
+        outline: none;
+        border: none;
+        border-bottom: 3px solid transparent;
+    }
+}

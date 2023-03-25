@@ -83,11 +83,49 @@
 }
 
 .underline-indicators > * {
-    padding: .5em 0;
+    cursor: pointer;
     border-bottom: 1px solid transparent;
+    padding: .5em 0;
     transition: border-color 300ms linear;
 
-    &:hover {
+    &:focus {
+        display: none;
+        outline: none;
+        border: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &.active {
         border-color: hsl(abs.$clr-white);
     }
+}
+
+.dot-indicators > * {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: .5em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    opacity: .4;
+    transition: opacity 300ms linear;
+
+    &:hover,
+    &:focus,
+    &.active {
+        opacity: 1;
+    }
+}
+
+.num-indicators > *{
+    display: block;
+    padding: .5em;
+    line-height: 1;
+    border: 1px solid hsl(abs.$clr-white);
+    background-color: transparent;
+    color: hsl(abs.$clr-white);
+    aspect-ratio: 1;
+    border-radius: 50%;
 }
