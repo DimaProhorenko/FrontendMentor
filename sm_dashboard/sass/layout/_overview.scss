@@ -1,0 +1,25 @@
+@use '../abstracts/' as abs;
+
+.overview {
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__type {
+        font-size: 1.2rem;
+        color: var(--clr-text1);
+    }
+
+    &__num {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &__bot {
+        margin-block-start: 2em;
+        text-align: right;
+    }
+}

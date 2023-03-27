@@ -1,0 +1,31 @@
+@use '../abstracts/' as abs;
+
+.preview {
+    margin-block-start: -5em;
+    
+    &__user {
+        margin-block-end: 1.5em;
+    }
+
+    &__icon {
+        display: inline-block;
+        width: abs.toRem(15);
+        height: abs.toRem(15);
+        margin-inline-end: .5em;
+        vertical-align: middle;
+    }
+
+    &__number {
+        font-size: 3.2rem;
+        margin-block-end: .2em;
+    }
+
+    &__followers {
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--clr-text1);
+        letter-spacing: 1px;
+        margin-block-end: 1.5em;
+    }
+}

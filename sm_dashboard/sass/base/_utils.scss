@@ -6,6 +6,15 @@
     margin-inline: auto;
 }
 
+.section {
+    padding-block: 2em;
+
+    &__title {
+        font-size: 3rem;
+        margin-block-end: 2rem;
+    }
+}
+
 .flow > *:where(* + *) {
     margin-block-start: 1em;
 }
