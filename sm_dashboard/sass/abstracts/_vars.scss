@@ -7,7 +7,7 @@
     --clr-bright-red: hsl(356, 69%, 56%);
     --clr-facebook: hsl(208, 92%, 53%);
     --clr-twitter: hsl(203, 89%, 53%);
-    --clr-instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --clr-instagram: linear-gradient(90deg, hsl( 37, 97%, 70%), hsl(329, 70%, 58%));
     --clr-youtube: hsl(348, 97%, 39%);
 
     // Theme toggle
@@ -22,7 +22,8 @@
 }
 
 html.theme-dark {
-    --clr-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    // --clr-toggle: linear-gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+    --clr-toggle: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     --clr-body-bg: hsl(230, 17%, 14%);
     --clr-top-bg: hsl(232, 19%, 15%);
     --clr-card-bg: hsl(228, 28%, 20%);

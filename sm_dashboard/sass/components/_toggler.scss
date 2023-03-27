@@ -3,6 +3,7 @@
 .toggler {
     display: flex;
     justify-content: space-between;
+    
 
     &__text {
         font-size: 1rem;
@@ -27,6 +28,13 @@
             background-color: var(--clr-body-bg);
             @include abs.absolute(top 50% right 4px);
             translate: 0 -50%;
+            transition: translate 300ms ease-in-out;
+        }
+
+        &--active {
+            &::after {
+                translate: -100% -50%;
+            }
         }
     }
 }

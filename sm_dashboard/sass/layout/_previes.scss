@@ -1,0 +1,61 @@
+@use '../abstracts/' as abs;
+
+.preview {
+    margin-block-start: -3em;
+    
+    &__user {
+        margin-block-end: 1.5em;
+    }
+
+    &__icon {
+        display: inline-block;
+        width: abs.toRem(15);
+        height: abs.toRem(15);
+        margin-inline-end: .5em;
+        vertical-align: middle;
+    }
+
+    &__number {
+        font-size: 3.2rem;
+        margin-block-end: .2em;
+    }
+
+    &__followers {
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--clr-text1);
+        letter-spacing: 1px;
+        margin-block-end: 1.5em;
+    }
+
+    &__count {
+        font-size: .9rem;
+        &::before {
+            font-family: 'FONT AWESOME 5 FREE';
+            font-weight: 900;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            margin-inline-end: .5em;
+        }
+
+        &--pos {
+            color: var(--clr-lime-green);
+
+            &::before {
+                content: '\f0d8';
+            }
+        }
+        
+        &--neg {
+            color: var(--clr-bright-red);
+
+            &::before {
+                content: '\f0d7';
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../abstracts/' as abs;
+
+.card {
+    padding: 2em;
+    border-radius: 10px;
+    // border-top: 5px solid transparent;
+    background-color: var(--clr-card-bg);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 5px;
+        display: inline-block;
+        @include abs.absolute(top 0 left 0);
+        border-radius: inherit;
+    }
+
+
+    &--facebook::before {
+        background: var(--clr-facebook);
+    }
+    &--twitter::before {
+        background: var(--clr-twitter);
+    }
+    &--instagram {
+        &::before {
+            
+        background: var(--clr-instagram);
+            
+        }
+    }
+    &--youtube::before {
+        background: var(--clr-youtube);
+    }
+}

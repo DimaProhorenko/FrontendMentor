@@ -5,3 +5,21 @@
     max-width: abs.$max-width;
     margin-inline: auto;
 }
+
+.flow > *:where(* + *) {
+    margin-block-start: 1em;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1em;
+
+    &__item {
+        flex: 1 0 23%;
+        width: 100%;
+        min-width: abs.toRem(240);
+        max-width: abs.toRem(300);
+    }
+}
