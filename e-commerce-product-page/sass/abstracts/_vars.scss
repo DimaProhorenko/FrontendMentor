@@ -1,0 +1,26 @@
+@use './functions' as f;
+
+$orange: hsl(26, 100%, 55%);
+$pale-orange: hsl(25, 100%, 94%);
+
+$very-dark-blue: hsl(220, 13%, 13%);
+$dark-grayish-blue: hsl(219, 9%, 45%);
+$grayish-blue: hsl(220, 14%, 75%);
+$light-grayish-blue: hsl(223, 64%, 98%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+
+// Typography
+$ff-regular: 'Kumbh Sans', Arial, sans-serif;
+
+
+//bp
+$bp-phone: f.toRem(599);
+$bp-tablet: f.toRem(720);
+$bp-desktop: f.toRem(1000);
+
+$max-width: f.toRem(1440);
+
+// Transitions
+$duration: 300ms;
+$timing: ease-in-out;

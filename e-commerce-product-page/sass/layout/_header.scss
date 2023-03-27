@@ -1,0 +1,98 @@
+@use '../abstracts/' as abs;
+
+.header {
+    padding-block: 2em;
+    background-color: abs.$white;
+    position: relative;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    &__burger {
+        z-index: 102;
+        position: relative;
+        
+        @include abs.for-tablet-up {
+            display: none;
+        }
+    }
+
+    &__nav {
+        @include abs.absolute(top 0 left 0);
+        width: 60%;
+        height: 100vh;
+        background-color: abs.$white;
+        padding-block-start: 5em;
+        padding-inline: 2em;
+        z-index: 101;
+        translate: -100%;
+        @include abs.transition(translate);
+
+        &--open {
+            translate: 0;
+        }
+
+
+        @include abs.for-tablet-up {
+            all: unset;
+
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+
+        @include abs.for-tablet-up {
+            flex-direction: row;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: .15em;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: inherit;
+        position: relative;
+        @include abs.transition(color);
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: abs.$orange;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            translate: -50%;
+            scale: 0 1;
+            @include abs.transition(scale);
+        }
+
+        &:hover,
+        &:focus {
+            color: abs.$orange;
+            outline: none;
+
+            &::before {
+                scale: 1;
+            }
+        }
+
+        @include abs.for-tablet-up {
+            font-size: 1rem;
+        }
+    }
+
+    &__cart {
+        margin-inline-start: auto;
+    }
+}

@@ -1,0 +1,51 @@
+@use '../abstracts/' as abs;
+
+.burger {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    width: abs.toRem(30);
+    height: abs.toRem(30);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    @include abs.transition(rotate);
+
+    &--open {
+        rotate: 360deg;
+
+        .burger__line {
+            transition: translate abs.$duration abs.$timing, rotate abs.$duration abs.$timing abs.$duration;
+        }
+
+        .burger__line--top {
+            translate: 0 calc(100% + 2px);
+            rotate: 45deg;
+        }
+        .burger__line--bot {
+            translate: 0 calc(-100% - 2px);
+            rotate: -45deg;
+        }
+
+        .burger__line--mid {
+            opacity: 0;
+        }
+    }
+
+    &__line {
+        width: 90%;
+        height: 5px;
+        background-color: abs.$dark-grayish-blue;
+        display: block;
+        border-radius: 5px;
+        transition: translate abs.$duration abs.$timing abs.$duration, rotate abs.$duration abs.$timing;
+
+        &--mid {
+            @include abs.transition(opacity);
+        }
+    }
+}

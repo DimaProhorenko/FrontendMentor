@@ -1,0 +1,10 @@
+@use '../abstracts/' as abs;
+
+.cart {
+    width: abs.toRem(30);
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
